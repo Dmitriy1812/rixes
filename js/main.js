@@ -225,11 +225,13 @@ if (catalogBabyOrder) {
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log(document.location.href);
-  if (document.location.href == 'http://localhost:3000/index.html') {
+  if (document.location.href == 'https://dmitriy1812.github.io/rixes/index.html') {
+    // if ( /index/i.test(document.location.href)) {
     document.querySelector('.header__logo').removeAttribute("href");
-    console.log(55);
+    console.log(document.location.href);
   } else {
     document.querySelector('.header__logo').setAttribute("href", "./index.html");
+    console.log(document.location.href);
   }
 });
 
