@@ -17,7 +17,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_materials_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/materials.js */ "./src/js/components/materials.js");
 /* harmony import */ var _components_materials_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_materials_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_photoswipe_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/photoswipe.js */ "./src/js/components/photoswipe.js");
+/* harmony import */ var _components_logo_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/logo.js */ "./src/js/components/logo.js");
+/* harmony import */ var _components_logo_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_logo_js__WEBPACK_IMPORTED_MODULE_5__);
 // console.log('components');
+
 
 
 
@@ -193,7 +196,8 @@ if (video) {
 const mobileWidthMediaQuery = window.matchMedia('(max-width: 750px)');
 let catalogBabyOrder = document.querySelector('.catalog__container--baby .market__order');
 if (catalogBabyOrder) {
-  console.log(catalogBabyOrder);
+  // console.log(catalogBabyOrder)
+
   function printLog(isMobileSize) {
     if (isMobileSize) {
       catalogBabyOrder.textContent = 'Заказать на:';
@@ -210,6 +214,24 @@ if (catalogBabyOrder) {
     printLog(event.matches);
   });
 }
+
+/***/ }),
+
+/***/ "./src/js/components/logo.js":
+/*!***********************************!*\
+  !*** ./src/js/components/logo.js ***!
+  \***********************************/
+/***/ (() => {
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log(document.location.href);
+  if (document.location.href == 'http://localhost:3000/index.html') {
+    document.querySelector('.header__logo').removeAttribute("href");
+    console.log(55);
+  } else {
+    document.querySelector('.header__logo').setAttribute("href", "./index.html");
+  }
+});
 
 /***/ }),
 

@@ -1546,6 +1546,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 .catalog__card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1597,6 +1598,11 @@ p, h1, h2, h3, h4, h5, h6 {
   .catalog__card-descr {
     font-size: 14rem;
   }
+}
+.catalog__card-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 .catalog .market__wrap {
   margin-left: 3.5%;
